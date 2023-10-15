@@ -13,8 +13,8 @@ const App = () => {
   // Ref Declaration
   const drawer = useRef(null);
 
-   // Arrow Function inside Functional Component
-   const changePage = (drawer, pageName) => {
+  // Arrow Function inside Functional Component
+  const changePage = (drawer, pageName) => {
     // Close Drawer
     drawer.current.closeDrawer();
     // Change state value
@@ -46,7 +46,7 @@ const App = () => {
         {page == "list" ? <List /> : page == "article" ? <Article /> : null}
       </View>
     </DrawerLayoutAndroid>
-     );
-    };
-    
-    export default App;
+  );
+};
+
+export default App;
