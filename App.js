@@ -24,11 +24,11 @@ const App = () => {
 
   // Arrow Function inside Functional Component
   const navigationView = () => (
-    <View style={{ padding: 30, backgroundColor: "#222222", flex: 1 }}>
+    <View style={{ paddingTop: 75, paddingHorizontal:20,backgroundColor: "#222222", flex: 1, borderRadius:6,}}>
       <Button text="List" onPress={() => changePage(drawer, "list")} />
-      <Separator height={30} />
+      <Separator height={25} />
       <Button text="Article" onPress={() => changePage(drawer, "article")} />
-      <Separator height={30} />
+      <Separator height={25} />
       <Button text="Close" onPress={() => drawer.current.closeDrawer()} />
     </View>
   );
@@ -41,7 +41,7 @@ const App = () => {
       renderNavigationView={navigationView}
     >
       <StatusBar style="light" backgroundColor="#AA0002" />
-      <View>
+      <View style={{paddingTop:20}}>
         <Header drawer={drawer} />
         {page == "list" ? <List /> : page == "article" ? <Article /> : null}
       </View>
